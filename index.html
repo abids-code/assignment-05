@@ -22,33 +22,188 @@
     </style>
 </head>
 
-<body class="lexend">
-    <header class="bg-[#F9F7F3]">
+<body class="lexend flex flex-col min-h-screen">
+    <header class="bg-[#F9F7F3] fixed top-0 right-0 left-0 z-10 backdrop-blur-lg">
         <!-- NavBar -->
         <div class="navbar max-w-7xl mx-auto py-6 pb-10">
             <div class="navbar-start">
                 <div class="">
-                    <button class="btn bg-[#B4F461]">Button</button>
+                    <button class="btn bg-[#B4F461]"><a href="blog.html">Blog</a></button>
                 </div>
             </div>
             <div class="navbar-center">
-                <img class="w-10 mr-4" src="assets/logo.png" alt="">
-                <a class="text-xl font-semibold">CrisisCall Bangladesh</a>
+                <img class="w-10 mr-4" src="assets/icons/logo.png" alt="">
+                <a class="text-xl font-semibold">CrisisCall Global</a>
             </div>
             <div class="navbar-end">
                 <div class="flex">
-                    <img class="mr-2" src="assets/coin.png" alt="">
-                    <h3 class="text-xl font-medium">$<span id="" class="">500</span> USD</h3>
+                    <img class="mr-2" src="assets/icons/coin.png" alt="">
+                    <h3 class="text-xl font-medium">$<span id="account-balance" class="">700</span> USD</h3>
                 </div>
             </div>
         </div>
     </header>
-    <main>
+
+    <main class="max-w-7xl mx-auto my-10 mt-52">
+        <div class="flex justify-center gap-5 mb-5 py-5 fixed top-28 right-0 left-0 z-20 backdrop-blur-md">
+            <button id="show-donation-page" class="btn hover:bg-[#B4F461]">Donation</button>
+            <button id="show-history-page" class="btn hover:bg-[#B4F461]">History</button>
+        </div>
+
+        <!-- Donation Section -->
+        <section id="donation-page" class="space-y-5">
+            <!-- Donation Card 1 -->
+            <div class="card lg:card-side bg-base-100 p-4 border-2 items-center">
+                <div class="flex-1">
+                    <figure>
+                        <img class="rounded-lg" src="assets/images/gaza.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="card-body flex-1">
+                    <div class="badge bg-slate-100 p-5 rounded-xl">
+                        <img class="w-5 mr-1" src="assets/icons/coin.png" alt="">
+                        <h3 class="font-medium">$<span id="donated-amount-one">15700</span> USD</h3>
+                    </div>
+                    <h2 class="card-title">Help Provide Urgent Relief for Families in Gaza</h2>
+                    <p> Recent events in Gaza have left countless families in crisis, with homes destroyed,
+                        neighborhoods shattered, and essential resources depleted. The people of Gaza are in urgent need
+                        of assistance, from medical supplies and food to shelter and clean water. Your donation can play
+                        a crucial role in providing relief and support for those facing immense hardship. Join us in
+                        supporting relief efforts and making a meaningful impact on the lives of those affected.</p>
+
+
+
+
+                    <div class="card-actions">
+                        <input type="text" placeholder="Write Donation Amount" id="input-donation-one"
+                            class="input input-bordered w-full" />
+                        <button id="btn-donation-one" class="btn bg-[#B4F461] w-full font-semibold text-xl"
+                            onclick="my_modal_one.showModal()">Donation</button>
+                        <dialog id="my_modal_one" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box text-center flex flex-col justify-center items-center space-y-2">
+                                <h3 class="text-3xl font-bold">Congrates!</h3>
+                                <img class="w-10 h-10" src="assets/icons/coin.png" alt="">
+                                <p class="py-4">You Have Donated for Humankind</p>
+                                <h3 class="text-xl font-bold">Successfully</h3>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Donation Card 2 -->
+            <div class="card lg:card-side bg-base-100 p-4 border-2 items-center">
+                <div class="flex-1">
+                    <figure>
+                        <img class="rounded-lg" src="assets/images/africa.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="card-body flex-1">
+                    <div class="badge bg-slate-100 p-5 rounded-xl">
+                        <img class="w-5 mr-1" src="assets/icons/coin.png" alt="">
+                        <h3 class="font-medium">$<span id="donated-amount-two">9500</span> USD</h3>
+                    </div>
+                    <h2 class="card-title">Bringing Clean Water to African Communities in Need</h2>
+                    <p> Across many regions of Africa, communities face daily challenges in accessing clean, safe water.
+                        Children and families often walk miles to collect water from contaminated sources, leading to
+                        health risks and waterborne diseases. By supporting water infrastructure projects, we can help
+                        provide sustainable, safe water solutions. Every contribution brings us closer to creating
+                        lasting change. Join us in making a difference.</p>
+
+                    <div class="card-actions">
+                        <input type="text" placeholder="Write Donation Amount" id="input-donation-two"
+                            class="input input-bordered w-full" />
+                        <button id="btn-donation-two" class="btn bg-[#B4F461] w-full font-semibold text-xl"
+                            onclick="my_modal_two.showModal()">Donation</button>
+                        <dialog id="my_modal_two" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box text-center flex flex-col justify-center items-center space-y-2">
+                                <h3 class="text-3xl font-bold">Congrates!</h3>
+                                <img class="w-10 h-10" src="assets/icons/coin.png" alt="">
+                                <p class="py-4">You Have Donated for Humankind</p>
+                                <h3 class="text-xl font-bold">Successfully</h3>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Donation Card 3 -->
+            <div class="card lg:card-side bg-base-100 p-4 border-2 items-center">
+                <div class="flex-1">
+                    <figure>
+                        <img class="rounded-lg" src="assets/images/kashmir.png" alt="">
+                    </figure>
+                </div>
+                <div class="card-body flex-1">
+                    <div class="badge bg-slate-100 p-5 rounded-xl">
+                        <img class="w-5 mr-1" src="assets/icons/coin.png" alt="">
+                        <h3 class="font-medium">$<span id="donated-amount-three">11000</span> USD</h3>
+                    </div>
+                    <h2 class="card-title">Supporting Education and Hope for Children in Kashmir</h2>
+                    <p> In Kashmir, prolonged instability has left many young people without access to reliable
+                        education, a crucial part of a hopeful future. School closures and limited resources mean
+                        thousands of children face challenges in learning and growing. Every donation opens doors to
+                        opportunity, helping to build a brighter future for the next generation. Join us in empowering
+                        children in Kashmir through education and hope.</p>
+
+                    <div class="card-actions">
+                        <input type="text" placeholder="Write Donation Amount" id="input-donation-three"
+                            class="input input-bordered w-full" />
+                        <button id="btn-donation-three" class="btn bg-[#B4F461] w-full font-semibold text-xl"
+                            onclick="my_modal_three.showModal()">Donation</button>
+                        <dialog id="my_modal_three" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box text-center flex flex-col justify-center items-center space-y-2">
+                                <h3 class="text-3xl font-bold">Congrates!</h3>
+                                <img class="w-10 h-10" src="assets/icons/coin.png" alt="">
+                                <p class="py-4">You Have Donated for Humankind</p>
+                                <h3 class="text-xl font-bold">Successfully</h3>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history-page" class="hidden w-full">
+            <div id="history-container" class="">
+
+            </div>
+        </section>
 
     </main>
-    <footer>
+    <footer class="h-40 bg-[#F9F7F3] mt-auto">
 
     </footer>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/donation.js"></script>
+    <script src="js/features.js"></script>
 </body>
 
 </html>
